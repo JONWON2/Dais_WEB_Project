@@ -3,8 +3,8 @@
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="#" style="font-family:NanumSquareEB;">Dais Open Lab</a></h1>
-      <nav id="navbar" class="navbar">
+      <h1 class="logo"><a href="/app/main/" style="font-family:NanumSquareEB;">Dais Open Lab</a></h1>
+      <nav id="navbar" class="navbar navbar-expand-lg">
         <div style="text-align: center;">
           <ul style="display:inline-blcok;">
             <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="#about">랩실소개</a></li>
@@ -17,10 +17,17 @@
         </div>
       </nav><!-- .navbar -->
       <nav id="navbar" class="navbar">
+        {% if request.session.user %}
+          <ul style="display:inline-blcok;">
+            <li><a class="nav-link scrollto " style="font-family:NanumSquareEB;" href="/app/main/">{{request.session.user}} 유저</a></li>
+            <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/accounts/signout/">로그아웃</a></li>
+          </ul>
+        {% else %}
         <ul style="display:inline-blcok;">
-          <li><a class="nav-link scrollto " style="font-family:NanumSquareEB;" href="#portfolio">로그인</a></li>
-          <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="#team">회원가입</a></li>
+          <li><a class="nav-link scrollto " style="font-family:NanumSquareEB;" href="/app/accounts/signin/">로그인</a></li>
+          <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/accounts/signup/">회원가입</a></li>
         </ul>
+        {% endif %}
       </nav><!-- .navbar -->
     </div>
 </header><!-- End Header -->
