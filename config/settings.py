@@ -46,6 +46,7 @@ ALLOWED_HOSTS = ['*','127.0.0.1']
 INSTALLED_APPS = [
     'app',
     'accountapp',
+    'contentsapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -103,8 +104,9 @@ DATABASES = {
 
 }
 DATABASE_ROUTERS = [
+    'contentsapp.router.DBRouter',
     'accountapp.router.DBRouter',
-    'app.router.DBRouter'
+    'app.router.DBRouter',
 ]
 
 # DATABASES['custom'] = get_secret("custom")
