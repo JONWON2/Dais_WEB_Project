@@ -244,9 +244,9 @@ cython_debug/
 
 __pycache__/
 db.sqlite3
-secrets.json
+Secrets.json
 Pipfile
 Pipfile.lock
 .vscode
-사이드 프로젝트(게시판).xd
-static/assets/img/
+# 사이드 프로젝트(게시판).xd
+# static/assets/img/
