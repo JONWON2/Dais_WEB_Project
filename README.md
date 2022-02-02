@@ -1,7 +1,13 @@
 #  Side Project -> Django를 활용한 웹사이트 제작하기
- 
-  * 추후 개발했던 방법에 대해서 기록을 남기고자 합니다.
+작성자 : 김종원 / 최근 수정일자 : 2022.02.03. 
 
+  * 추후 개발했던 방법에 대해서 기록을 남기고자 합니다.
+    * 부트스트랩 템플릿을 사용하는 방법
+    * XD 프로그램 핵심 사용방법
+      * XD 디자인 후 해당 디자인에 대한 CSS 만들어 적용하는 방법
+    * Django 프레임워크를 사용해 웹사이트 만드는 동작 원리 및 꿀팁!
+      * MTV 패턴 소개
+    * DB 설계시 ERD 작성에 대한 무료 툴 소개
  <br>
 
 ## 🚗 How to run
@@ -29,18 +35,18 @@
 ```
 4. 격리된 컨테이너 공간을 생성합니다.
 ```
-docker run --name Lab -v /home/pratice/:/working_docker_folder -p 8000:8000 continuumio/anaconda3:latest
+  docker run --name Lab -v /home/pratice/:/working_docker_folder -p 8000:8000 continuumio/anaconda3:latest
 
-## 도커 환경에 진입했다면, 파이썬 3.6.4 버전으로 가상환경 생성.
-conda create -n lab python=3.6.4
-conda activate lab
+  ## 도커 환경에 진입했다면, 파이썬 3.6.4 버전으로 가상환경 생성.
+  conda create -n lab python=3.6.4
+  conda activate lab
 
-## 도커 환경에 진입하지 못했다면
-docker start Lab
-docker exec -it Lab bash
-## 파이썬 3.6.4 버전으로 가상환경 생성.
-conda create -n lab python=3.6.4
-conda activate lab
+  ## 도커 환경에 진입하지 못했다면
+  docker start Lab
+  docker exec -it Lab bash
+  ## 파이썬 3.6.4 버전으로 가상환경 생성.
+  conda create -n lab python=3.6.4
+  conda activate lab
 ```
 5. 생성된 가상환경 내에서 필요한 패키지 설치해주세요.
 ```
@@ -54,17 +60,17 @@ conda activate lab
 
 6. 프로젝트 실행에 필요한 테이블을 생성해주세요.
 ```
-python manage.py migrate
+  python manage.py migrate
 ```
 
 7. 웹 어플리케이션(WAS)을 실행시켜주세요.
 ```
-python manage.py runserver 0.0.0.0:8000
+  python manage.py runserver 0.0.0.0:8000
 ```
 
 8. 웹 사이트에 아래 링크를 입력해주세요.
 ```
-http://127.0.0.1:8000/app/main or http://외부IP:8000/app/main or http://도메인:8000/app/main 
+  http://127.0.0.1:8000/app/main or http://외부IP:8000/app/main or http://도메인:8000/app/main 
 ```
 
 <br>
@@ -113,3 +119,4 @@ Database
 ## 📅 Development period
 
 2022.01.30 ~ 2022.02.03(5-Days)
+---
