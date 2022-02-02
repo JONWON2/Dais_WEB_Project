@@ -1,0 +1,241 @@
+.login_text{
+    top: 202px;
+    left: 595px;
+    width: 176px;
+    height: 65px;
+    text-align: center;
+    font: normal normal normal 65px/78px NanumSquareEB;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+
+.form-signin{
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    padding-top: 0px;
+}
+.btn {
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 50px 5px 50px;
+    border-color: #ED502E;
+}
+.btn-outline-success{
+    color: white;
+    border-color: #ED502E;
+    background-color:#ED502E ;
+}
+
+.form-signup{
+    width: 100%;
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    padding-top: 0px;
+}
+
+.signup_text{
+    top: 419px;
+    left: 363px;
+    width: 84px;
+    height: 24px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.intro-page{
+    width: 55%;
+    max-width: 60%;
+    padding: 15px;
+    margin: 0 auto;
+    padding-top: 0px;
+    background-color: white;
+}
+
+.intro_lab_contents_box{
+    top: 241px;
+    left: 208px;
+    width: 100%;
+    height: 20%;
+    margin-left: 1rem;
+    padding-bottom: 4px;
+    padding-top: 4px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 3px solid #8f8e8e;
+    opacity: 1;
+}
+
+.intro_lab_member_box{
+    top: 241px;
+    left: 208px;
+    width: 100%;
+    height: 300px;
+    margin-left: 1rem;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 3px solid #8f8e8e;
+    opacity: 1;
+}
+
+.intro_lab_circle{
+    top: 924px;
+    left: 229px;
+    width: 5px;
+    height: 5px;
+    background: #000000 0% 0% no-repeat padding-box;
+    border: 1px solid #000000;
+    opacity: 1;
+}
+.intro_picture-professor{
+    width: 150px;
+    background: transparent url('/static/assets/img/교수님.jpg') 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    /* border-radius: 96px; */
+    border-radius: 10rem;
+    opacity: 1;
+    margin-right: 50px;
+
+}
+.intro_picture-shashank{
+    width: 150px;
+    background: transparent url('/static/assets/img/샤상크.jpg') 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    border-radius: 10rem;
+    opacity: 1;
+    margin-right: 50px;
+}
+.intro_picture-jongwon{
+    width: 150px;
+    background: transparent url('/static/assets/img/단체샷.jpg') 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    /* border-radius: 96px; */
+    border-radius: 10rem;
+    opacity: 1;
+    margin-right: 50px;
+}
+
+.center{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: auto;
+    transform: translate(-50%,-50%);
+}
+.item-lists{
+    max-width:100%;
+    width: 100%;
+    height:20%;
+    position: relative;
+    margin-left: 1rem;
+
+    border: 2px solid #707070;
+    /* border-radius: 5px; */
+    /* overflow: hidden; */
+}
+.item-lists > h2{
+    display: block;
+    font-size: 2.2rem;
+    padding-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color:#ED502E;
+    font-family:NanumSquareR;
+}
+.item{
+    position: relative;
+    top: 0;
+    padding: 10px;
+    background: white;
+    /* transition: 0.4s;
+    border-radius: 8px; */
+}
+.item:hover{
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.item h2{
+    font-size : 15px;
+    font-weight:bold;
+    line-height: 1.4;
+    margin-top:2px;
+    margin-bottom: 8px;
+}
+.item p{
+    margin:0;
+    font-size: 14px;
+    color:#555;
+}
+.clear{
+    clear: both;
+}
+.item img{
+    float: left;
+    width:150px;
+    height:150px;
+    margin-right: 10px;
+    border-radius: 30rem;
+    background-position:33% 34%;
+}
+.item .float-left{
+    float: left;
+}
+.item .float-right{
+    float: right;
+}
+
+.intro_picture-seung{
+    width: 150px;
+    background: transparent url('/static/assets/img/랩실.jpg') 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    /* border-radius: 96px; */
+    border-radius: 10rem;
+    opacity: 1;
+    margin-right: 50px;
+}
+.intro_picture-soyun{
+    width: 150px;
+    background: transparent url('/static/assets/img/랩실(2).jpg') 0% 0% no-repeat padding-box;
+    border: 1px solid #707070;
+    /* border-radius: 96px; */
+    border-radius: 10rem;
+    opacity: 1;
+    margin-right: 50px;
+}
+
+.jb-sidebar-left {
+    width: 160px;
+    padding: 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top:2rem;
+    margin-left: 13rem;
+    float: left;
+    /* border: 1px solid #bcbcbc; */
+}
+.jb-content {
+    width: 450px;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: left;
+    border: 1px solid #bcbcbc;
+}
+.jb-sidebar-right {
+    width: 160px;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: right;
+    border: 1px solid #bcbcbc;
+}
+
+.jb-sidebar-left1 {
+    width: 200px;
+    padding: 60px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-top:2rem;
+    margin-left: 13rem;
+    float: left;
+    /* border: 1px solid #bcbcbc; */
+}

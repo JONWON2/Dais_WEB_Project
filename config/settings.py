@@ -38,13 +38,15 @@ SECRET_KEY = get_secret("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*','127.0.0.1']
-
+# ALLOWED_HOSTS = ['*','0.0.0.0','192.168.0.2']
+ALLOWED_HOSTS = ['192.168.0.2','*','0.0.0.0']
 
 # Application definition
 
 INSTALLED_APPS = [
     'app',
+    'accountapp',
+    'contentsapp',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -91,9 +93,23 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    },
+    'custom': { # thirdapp에서 사용할 데이터베이스 설정 추가
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': "Dais",
+    'USER': "OpenDaisLab",
+    'PASSWORD': "daislablove@23",
+    'HOST': "203.250.72.8",
+    'PORT': 18301}
+
 }
-DATABASES['custom'] = get_secret("custom")
+DATABASE_ROUTERS = [
+    'contentsapp.router.DBRouter',
+    'accountapp.router.DBRouter',
+    'app.router.DBRouter',
+]
+
+# DATABASES['custom'] = get_secret("custom")
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -117,13 +133,11 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
-
-USE_L10N = True
 
 USE_TZ = True
 

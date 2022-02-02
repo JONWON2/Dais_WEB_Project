@@ -1,0 +1,29 @@
+{%load static%}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="/app/main/" style="font-family:NanumSquareEB;">DaiS Open Lab</a></h1>
+      <nav id="navbar" class="navbar navbar-expand-lg" style="margin-right:10rem;">
+        <div style="text-align: center;">
+          <ul style="display:inline-blcok;">
+            <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/contentsapp/intro/">랩실소개</a></li>
+            <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/contentsapp/meetup/?year=2022/">meetup</a></li>
+            <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/contentsapp/proud/?year=2022/">랩실자랑</a></li>
+            <li><a class="nav-link scrollto " style="font-family:NanumSquareEB;" href="/app/contentsapp/study/?category=전체/">학습자료</a></li>
+            <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/contentsapp/notice/">공지사항</a></li>
+            <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;visibility:hidden;" href="#">항</a></li>
+            {% if request.session.user %}
+              <li><a class="nav-link scrollto " style="font-family:NanumSquareEB;" href="/app/main/">{{request.session.user}} 유저</a></li>
+              <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/accounts/signout/">로그아웃</a></li>
+            {% else %}
+              <li><a class="nav-link scrollto " style="font-family:NanumSquareEB;" href="/app/accounts/signin/">로그인</a></li>
+              <li><a class="nav-link scrollto" style="font-family:NanumSquareEB;" href="/app/accounts/signup/">회원가입</a></li>
+            {% endif %}
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </div>
+      </nav><!-- .navbar -->
+     
+    </div>
+</header><!-- End Header -->

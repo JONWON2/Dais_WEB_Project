@@ -1,0 +1,118 @@
+{% extends 'notFootter_base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+
+    <div class= "jb-sidebar-left1" style="display:inline-block;position: fixed;"> 
+        <a style="display:block;width:inherit; color:black;" href="#">전체</a>
+        <a style="display:block;width:inherit;" href="#">이상탐지</a>
+        <a style="display:block;width:inherit;" href="#">데이터분석</a>
+        <a style="display:block;width:inherit;" href="#">AI</a>
+        <a style="display:block;width:inherit;" href="#">IT 인프라</a>
+        <a style="display:block;width:inherit;" href="#">Server</a>
+        <a style="display:block;width:inherit;" href="#">etc</a>
+    </div>
+
+    <div class= "jb-sidebar-left" style="display:inline-block;position: fixed;"> 
+      {% if request.GET.category == '전체/' %}
+          <a style="display:block;width:inherit; color:black;" href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% elif request.GET.category == '이상탐지/' %}
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;color:black;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% elif request.GET.category == '데이터분석/' %}
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;color:black;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% elif request.GET.category == 'AI/' %}
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;color:black;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% elif request.GET.category == 'IT인프라/' %}
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;color:black;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% elif request.GET.category == 'Server/' %}
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;color:black;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% elif request.GET.category == 'etc/' %}
+          <a style="display:block;width:inherit; " href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit; color:black;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% else %}
+          <a style="display:block;width:inherit; color:black;" href="/app/contentsapp/study/?category=전체/">전체</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=이상탐지/">이상탐지</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=데이터분석/">데이터분석</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=AI/">AI</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=IT인프라/">IT 인프라</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=Server/">Server</a>
+          <a style="display:block;width:inherit;" href="/app/contentsapp/study/?category=etc/">etc</a>
+      {% endif %} 
+  </div>
+
+    <div id="breadcrumbs" class="breadcrumbs intro-page" >
+        <div style="text-align:center;">
+            <div style="margin:4rem 0rem;"><br></div>
+            <h2 style="font-family:NanumSquareR;font-size:2rem;">학습자료</h2>
+            <div style="margin:1rem 0rem;"><br></div>
+            <div style= "float:right;">
+                <form method="POST", action="/app/contentsapp/study/?category={{category}}">
+                    {% csrf_token %}
+                    <input style="border: 1px solid #ED502E;color: white;background: #ED502E;width: 5rem;border-radius: 3rem;" type="submit" value="글쓰기" name="write">
+                </form>
+            </div>
+            <div style="margin:1rem 0rem;"><br></div>
+        </div>
+
+        
+        <div class="accordion p-3" id="accordionExample">
+          {% for data in DB %}
+            <div class="accordion-item">
+              <h2 class="accordion-header" id={{data.head_name}} style="font-family: 'NanumSquareEB'; text-align:center;">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={{data.head_id_name}} aria-expanded="false" aria-controls={{data.id_name}}>
+                  {{data.title}}
+                </button>
+              </h2>
+              <div id={{data.id_name}} class="accordion-collapse collapse" aria-labelledby={{data.head_name}} data-bs-parent="#accordionExample" style="">
+                <div class="accordion-body">
+                  {{data.contents}}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+    <div>
+</main>
+{% endblock %}

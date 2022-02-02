@@ -1,0 +1,30 @@
+{% extends 'notFootter_base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+  <div id="breadcrumbs" class="breadcrumbs intro-page" style="text-align: center">
+    <div style="margin:4rem 0rem;"><br></div>
+    <h2 style="font-family:NanumSquareEB;">로그인</h2>
+    <div style="margin:1rem 0rem;"><br></div>
+  <div>
+    <form method = "post" class="form-signin text-center " action="{% url 'accountapp:signin' %}">
+      {% csrf_token %}
+      {% if messages %}
+          <div class="alert alert-danger" role="alert">
+              {% for message in messages %}
+                  {{ message.message }}
+              {% endfor %}
+          </div>
+      {% endif %}
+      <div class="form-group mb-3">
+          <input type="text" name="user_id" id="user_id" class="form-control" placeholder="아이디를 입력해주세요." required autofocus >
+      </div>
+      <div class="form-group mb-5">
+        <input type="password" name="password" id="password" class="form-control" placeholder="비밀번호를 입력해주세요." required>
+      </div>
+      <button class="btn btn-outline-success"  style = "background: #ED502E;border-color: #ED502E;color: white" type="submit" name="singin">로그인</button>
+      <div style="margin:2rem 0rem;"><br></div>
+    </form>
+</main>
+{% endblock %}
