@@ -244,7 +244,7 @@ cython_debug/
 
 __pycache__/
 db.sqlite3
-#secrets.json
+secrets.json
 Pipfile
 Pipfile.lock
 .vscode
