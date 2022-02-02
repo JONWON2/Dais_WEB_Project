@@ -1,0 +1,105 @@
+{% extends 'notFootter_base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+    <div class= "jb-sidebar-left" style="display:inline-block;position: fixed;"> 
+        {% if request.GET.year == '2021/' %}
+            <a style="display:block;width:auto; color:black;" href="/app/contentsapp/proud/?year=2021/">2021</a>
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2022/">2022</a>
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2023/">2023</a>
+        {% elif year == '2022/' %}
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2021/">2021</a>
+            <a style="display:block;width:auto;color:black;" href="/app/contentsapp/proud/?year=2022/">2022</a>
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2023/">2023</a>
+        {% elif year == '2023/' %}
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2021/">2021</a>
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2022/">2022</a>
+            <a style="display:block;width:auto; color:black;" href="/app/contentsapp/proud/?year=2023/">2023</a>
+        {% else %}
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2021/">2021</a>
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2022/">2022</a>
+            <a style="display:block;width:auto;" href="/app/contentsapp/proud/?year=2023/">2023</a>
+        {% endif %} 
+    </div>
+    <div id="breadcrumbs" class="breadcrumbs intro-page" >
+        
+        <div style="text-align:center;">
+            <div style="margin:4rem 0rem;"><br></div>
+            <h2 style="font-family:NanumSquareR;font-size:2rem;">랩실자랑</h2>
+            <div style="margin:1rem 0rem;"><br></div>
+            <div style= "float:right;">
+                <form method="POST", action="/app/contentsapp/proud/?year={{year}}">
+                    {% csrf_token %}
+                    <input type="submit" value="글쓰기" name="write">
+                </form>
+            </div>
+        </div>
+
+        <h2 style="font-family:NanumSquareR;font-size:1.5rem;margin:0rem 0rem;margin-left:1rem;">U 챌린지 금상</h2>
+        <div style="margin:0rem 0rem;"><br></div>
+        <div style="width:100%;">
+            <div class="item-lists">
+                <div class="item">
+                    <div class="intro_picture-professor" style="float: left; height:150px;display:inline-block;background-size:340%; background-position:30% 55%;margin:0.2rem 1rem;margin-right:3rem;"></div>
+                    <div>
+                        <h2>이름 : 이수동</h2>
+                        <p>울산대학교 내에서 데이터 분석 문화를 만들고 있습니다.</p>
+                        <ul style="font-size:8px;margin-top:1rem;">
+                            <h2 style="font-size:13px;"> 경험</h2>
+                            <li> 2018년 3월 - 2019년 11월, SK 하이닉스, 데이터 사이언스 수석 관리자, 대한민국 이천</li>
+                            <li> 2019. 12. ~ 2020. 08. 대전 한국원자력연구원 지능컴퓨팅연구소 선임연구원</li>
+                            <li> 2018년 3월 - 2019년 11월, SK 하이닉스, 데이터 사이언스 수석 관리자, 대한민국 이천</li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <div style="margin:0rem 0rem;"><br></div>
+        <h2 style="font-family:NanumSquareR;font-size:1.5rem;margin:0rem 0rem;margin-left:1rem;">11월</h2>
+        <div style="margin:0rem 0rem;"><br></div>
+        <div style="width:100%;">
+            <div class="item-lists">
+                <div class="item">
+                    <div class="intro_picture-professor" style="float: left; height:150px;display:inline-block;background-size:340%; background-position:30% 55%;margin:0.2rem 1rem;margin-right:3rem;"></div>
+                    <div>
+                        <h2>이름 : 이수동</h2>
+                        <p>울산대학교 내에서 데이터 분석 문화를 만들고 있습니다.</p>
+                        <ul style="font-size:8px;margin-top:1rem;">
+                            <h2 style="font-size:13px;"> 경험</h2>
+                            <li> 2018년 3월 - 2019년 11월, SK 하이닉스, 데이터 사이언스 수석 관리자, 대한민국 이천</li>
+                            <li> 2019. 12. ~ 2020. 08. 대전 한국원자력연구원 지능컴퓨팅연구소 선임연구원</li>
+                            <li> 2018년 3월 - 2019년 11월, SK 하이닉스, 데이터 사이언스 수석 관리자, 대한민국 이천</li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 12월 -->
+        <div style="margin:0rem 0rem;"><br></div>
+        <h2 style="font-family:NanumSquareR;font-size:1.5rem;margin:0rem 0rem;margin-left:1rem;">12월</h2>
+        <div style="margin:0rem 0rem;"><br></div>
+        <div style="width:100%;">
+            <div class="item-lists">
+                <div class="item">
+                    <div class="intro_picture-professor" style="float: left; height:150px;display:inline-block;background-size:340%; background-position:30% 55%;margin:0.2rem 1rem;margin-right:3rem;"></div>
+                    <div>
+                        <h2>이름 : 이수동</h2>
+                        <p>울산대학교 내에서 데이터 분석 문화를 만들고 있습니다.</p>
+                        <ul style="font-size:8px;margin-top:1rem;">
+                            <h2 style="font-size:13px;"> 경험</h2>
+                            <li> 2018년 3월 - 2019년 11월, SK 하이닉스, 데이터 사이언스 수석 관리자, 대한민국 이천</li>
+                            <li> 2019. 12. ~ 2020. 08. 대전 한국원자력연구원 지능컴퓨팅연구소 선임연구원</li>
+                            <li> 2018년 3월 - 2019년 11월, SK 하이닉스, 데이터 사이언스 수석 관리자, 대한민국 이천</li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+    <div>
+</main>
+{% endblock %}
