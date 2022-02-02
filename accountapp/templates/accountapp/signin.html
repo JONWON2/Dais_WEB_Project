@@ -3,12 +3,12 @@
 
 {% block content %}
 <main id="main">
-  <div id="breadcrumbs" class="breadcrumbs" style="text-align: center">
-    <div style="margin:2rem 0rem;"><br></div>
+  <div id="breadcrumbs" class="breadcrumbs intro-page" style="text-align: center">
+    <div style="margin:4rem 0rem;"><br></div>
     <h2 style="font-family:NanumSquareEB;">로그인</h2>
     <div style="margin:1rem 0rem;"><br></div>
   <div>
-    <form method = "post" class="form-signin text-center" action="{% url 'accountapp:signin' %}">
+    <form method = "post" class="form-signin text-center " action="{% url 'accountapp:signin' %}">
       {% csrf_token %}
       {% if messages %}
           <div class="alert alert-danger" role="alert">

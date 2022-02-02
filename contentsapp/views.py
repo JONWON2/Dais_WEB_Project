@@ -41,8 +41,12 @@ class meetup_page(View):
     def post(self, request, *args, **kwargs):
         year = request.GET.get('year')[:-1]
         request.session["year"] = str(year)
-        return HttpResponseRedirect(reverse('contentsapp:meetup_write'))
 
+        user_id = request.session.get("user",False)
+        if user_id:
+            return HttpResponseRedirect(reverse('contentsapp:meetup_write'))
+        else:
+            return HttpResponseRedirect(reverse('accountapp:signin')) 
         # return render(request, 'contentsapp/write_meetup.html',{"year": str(year)})
 class meetup_write_page(View):
     def get(self, request, *args, **kwargs):
@@ -74,7 +78,6 @@ class meetup_write_page(View):
                 DB_M.contents = contents
                 DB_M.meet_regi_date = datetime.datetime.now().strftime ("%Y-%m-%d")
                 DB_M.year = year
-
 
                 # 파일을 local 환경에 저장하는 코드
                 # 파일 이름이 중복이 되지 않게 저장하기
@@ -111,7 +114,12 @@ class proud_page(View):
     def post(self, request, *args, **kwargs):
         year = request.GET.get('year')[:-1]
         request.session["year"] = str(year)
-        return HttpResponseRedirect(reverse('contentsapp:proud_write'))
+        
+        user_id = request.session.get("user",False)
+        if user_id:
+            return HttpResponseRedirect(reverse('contentsapp:proud_write'))
+        else:
+            return HttpResponseRedirect(reverse('accountapp:signin')) 
 
 class proud_write_page(View):
     def get(self, request, *args, **kwargs):
@@ -182,7 +190,11 @@ class study_page(View):
     def post(self, request, *args, **kwargs):
         category = request.GET.get('category')
         request.session["category"] = category
-        return HttpResponseRedirect(reverse('contentsapp:study_write'))
+        user_id = request.session.get("user",False)
+        if user_id:
+            return HttpResponseRedirect(reverse('contentsapp:study_write'))
+        else:
+            return HttpResponseRedirect(reverse('accountapp:signin')) 
 
 class study_write_page(View):
     def get(self, request, *args, **kwargs):
@@ -231,7 +243,11 @@ class notice_page(View):
             })
 
     def post(self, request, *args, **kwargs):
-        return HttpResponseRedirect(reverse('contentsapp:notice_write'))
+        user_id = request.session.get("user",False)
+        if user_id:
+            return HttpResponseRedirect(reverse('contentsapp:notice_write'))
+        else:
+            return HttpResponseRedirect(reverse('accountapp:signin')) 
 
 class notice_write_page(View):
     def get(self, request, *args, **kwargs):
