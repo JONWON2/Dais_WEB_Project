@@ -36,7 +36,7 @@ def get_secret(setting, secrets=secrets):
 SECRET_KEY = get_secret("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # ALLOWED_HOSTS = ['*','0.0.0.0','192.168.0.2']
 ALLOWED_HOSTS = ['192.168.0.2','*','0.0.0.0']
