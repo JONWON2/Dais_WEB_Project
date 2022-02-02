@@ -16,7 +16,7 @@ urlpatterns = [
     path('study/', views.study_page.as_view(),name='study'),
     path('study/write/', views.study_write_page.as_view(),name='study_write'),
 
-    path('notice/', views.notice_page.as_view(),name='study'),
+    path('notice/', views.notice_page.as_view(),name='notice'),
     path('notice/write/', views.notice_write_page.as_view(),name='notice_write'),
 
 ]

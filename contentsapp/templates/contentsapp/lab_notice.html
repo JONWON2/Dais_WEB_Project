@@ -11,37 +11,27 @@
             <div style= "float:right;">
                 <form method="POST", action="/app/contentsapp/notice/">
                     {% csrf_token %}
-                    <input type="submit" value="글쓰기" name="write">
+                    <input style="border: 1px solid #ED502E;color: white;background: #ED502E;width: 5rem;border-radius: 3rem;" type="submit" value="글쓰기" name="write">
                 </form>
             </div>
             <div style="margin:1rem 0rem;"><br></div>
         </div>
         <div class="accordion p-3" id="accordionExample">
+          {% for data in DB %}
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne" style="font-family: 'NanumSquareEB'; text-align:center;">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                  테스트
+              <h2 class="accordion-header" id={{data.head_name}} style="font-family: 'NanumSquareEB'; text-align:center;">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={{data.head_id_name}} aria-expanded="false" aria-controls={{data.id_name}}>
+                  {{data.title}}
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+              <div id={{data.id_name}} class="accordion-collapse collapse" aria-labelledby={{data.head_name}} data-bs-parent="#accordionExample" style="">
                 <div class="accordion-body">
-                  웹페이지 테스트 중입니다.
+                  {{data.contents}}
                 </div>
               </div>
             </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo" style="font-family: 'NanumSquareEB'; text-align:center;">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    테스트 중
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    테스트
-                  </div>
-                </div>
-              </div>
+          {% endfor %}
         </div>
-    <div>
+  <div>
 </main>
 {% endblock %}
