@@ -1,0 +1,39 @@
+{% extends 'notFootter_base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+    <div id="breadcrumbs" class="breadcrumbs intro-page" >
+        <div style="text-align:center;">
+            <div style="margin:4rem 0rem;"><br></div>
+            <h2 style="font-family:NanumSquareR;font-size:2rem;">글쓰기<br></h2>
+            <p style="font-family:NanumSquareR;font-size:1rem;">Meetup</p>
+            <div style="margin:1rem 0rem;"><br></div>
+        </div>
+        <div style="width:100%;">
+            <form class="was-validated p-3" action="/app/contentsapp/meetup/write/" method="POST">
+                {% csrf_token %}
+                <div class="mb-3 col-md-7" style="float: none; margin:1rem:0rem;width:100%;height:3rem;">
+                    <label style="float:left;width:20%;text-align: center;font-family:NanumSquareEB;padding-top: 0.25rem;" for="validationTextarea" class="form-label" style="font-family:NanumSquareR;">제목</label>
+                    <textarea style="float:right;width:80%;height:1.5rem;" class="form-control is-invalid" id="validationTextarea" name="title" placeholder="Meetup을 진행한 월에 대해 기입해주세요."></textarea>
+                </div>
+            
+                <div class="mb-3 col-md-7" style="float: none; margin:0 auto;width:100%;height:11rem;">
+                    <label  style="float:left;width:20%;text-align: center;font-family:NanumSquareEB;padding-top: 0.25rem;" for="validationTextarea" class="form-label" style="font-family:NanumSquareR;">활동내용</label>
+                    <textarea style="float:right;width:80%;height:10rem;" class="form-control is-invalid" id="validationTextarea"name="contents"  placeholder="활동 내용을 입력해주세요."></textarea>
+                </div>
+                <div class="mb-3 col-md-7" style="float: none; margin:0 auto;width:100%;height:3.5rem;">
+                    <label style="float:left;width:15%;text-align: center;font-family:NanumSquareEB;padding-top: 0.25rem;" for="validationTextarea" class="form-label" style="font-family:NanumSquareR;">이미지 파일</label>
+                    <input style="float:right;width:80%;" type="file" class="form-control" aria-label="file example" name="file" accept="image/gif, image/jpeg, image/png"  placeholder="메인 이미지로 사용하니 png,jpg,JEPG, PNG 파일로 제출해주세요.">
+                    <p style="float:left;width:20%;"></p>
+                    <p style="float:right;width:80%;font-size:0.7rem;"><b>* 해당 이미지를 메인 이미지로 사용하니 png,jpg,JEPG, PNG 파일로 제출해주세요<b></p>
+                </div>
+                <div class="mb-5 col-md-7 mt-5 text-center" style="float: none; margin:0 auto;width:100%;">
+                    <input class="btn btn-success mx-3" style="font-family:NanumSquareR;border-color: #198754;"  method="POST" type="submit" name="before" value="이전">
+                    <input class="btn btn-success" style="font-family:NanumSquareR;border-color: #198754;"  method="POST" type="submit" name="finish" value="완료">
+                </div>
+            </form>
+        </div>
+    <div>
+</main>
+{% endblock %}

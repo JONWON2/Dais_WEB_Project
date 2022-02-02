@@ -1,0 +1,48 @@
+{% extends 'notFootter_base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="main">
+    <div id="breadcrumbs" class="breadcrumbs intro-page" >
+        <div style="text-align:center;">
+            <div style="margin:4rem 0rem;"><br></div>
+            <h2 style="font-family:NanumSquareR;font-size:2rem;">글쓰기<br></h2>
+            <p style="font-family:NanumSquareR;font-size:1rem;">학습자료</p>
+            <div style="margin:1rem 0rem;"><br></div>
+        </div>
+        <div style="width:100%;">
+            <form class="was-validated p-3" action="/app/contentsapp/study/write/" method="POST">
+                {% csrf_token %}
+                <div class="mb-3 col-md-7" style="float: none; margin:1rem:0rem;width:100%;height:3rem;">
+                    <label style="float:left;width:20%;text-align: center;font-family:NanumSquareEB;padding-top: 0.25rem;" for="validationTextarea" class="form-label" style="font-family:NanumSquareR;">제목</label>
+                    <textarea style="float:right;width:80%;height:1.5rem;" class="form-control is-invalid" id="validationTextarea" name="title" placeholder="제목을 기입해주세요." ></textarea>
+                </div>
+                <div class="mb-3 col-md-7" style="float: none; margin:1rem:0rem;width:100%;height:3rem;">
+                    <label style="float:left;width:20%;text-align: center;font-family:NanumSquareEB;padding-top: 0.25rem;" for="validationTextarea" class="form-label" style="font-family:NanumSquareR;">카테고리 유형</label>
+                    <select style="float:right;width:80%;height:2.5rem;" class="form-select" aria-label="select example" name="category" placeholder="카테고리 유형을 선택해주세요." >
+                    <option value="" disabled selected>카테고리 유형을 선택해주세요.</option>
+                    <option value="이상탐지">이상탐지</option>
+                      <option value="데이터분석">데이터분석</option>
+                      <option value="AI">AI</option>
+                      <option value="IT인프라">IT 인프라</option>
+                      <option value="Server">Server</option>
+                      <option value="etc">etc</option>
+                    </select>
+                </div>
+                <div class="mb-3 col-md-7" style="float: none; margin:1rem:0rem;width:100%;height:3rem;">
+                    <label style="float:left;width:20%;text-align: center;font-family:NanumSquareEB;padding-top: 0.25rem;" for="validationTextarea" class="form-label" style="font-family:NanumSquareR;">참조할 링크 정보</label>
+                    <textarea style="float:right;width:80%;height:1.5rem;" class="form-control is-invalid" id="validationTextarea" name="links" placeholder="추가로 정리한 노션 링크가 있으면 남겨주세요." ></textarea>
+                </div>
+                <div class="mb-3 col-md-7" style="float: none; margin:0 auto;width:100%;height:11rem;">
+                    <label  style="float:left;width:20%;text-align: center;font-family:NanumSquareEB;padding-top: 0.25rem;" for="validationTextarea" class="form-label" style="font-family:NanumSquareR;">공유할 내용</label>
+                    <textarea style="float:right;width:80%;height:10rem;" class="form-control is-invalid" id="validationTextarea"name="contents"  placeholder="내용을 기입해주세요." ></textarea>
+                </div>
+                <div class="mb-5 col-md-7 mt-5 text-center" style="float: none; margin:0 auto;width:100%;">
+                    <input class="btn btn-success mx-3" style="font-family:NanumSquareR;border-color: #198754;"  method="POST" type="submit" name="before" value="이전">
+                    <input class="btn btn-success" style="font-family:NanumSquareR;border-color: #198754;"  method="POST" type="submit" name="finish" value="완료">
+                </div>
+            </form>
+        </div>
+    <div>
+</main>
+{% endblock %}
