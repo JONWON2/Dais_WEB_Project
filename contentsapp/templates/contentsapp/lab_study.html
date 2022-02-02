@@ -4,16 +4,6 @@
 {% block content %}
 <main id="main">
 
-    <div class= "jb-sidebar-left1" style="display:inline-block;position: fixed;"> 
-        <a style="display:block;width:inherit; color:black;" href="#">전체</a>
-        <a style="display:block;width:inherit;" href="#">이상탐지</a>
-        <a style="display:block;width:inherit;" href="#">데이터분석</a>
-        <a style="display:block;width:inherit;" href="#">AI</a>
-        <a style="display:block;width:inherit;" href="#">IT 인프라</a>
-        <a style="display:block;width:inherit;" href="#">Server</a>
-        <a style="display:block;width:inherit;" href="#">etc</a>
-    </div>
-
     <div class= "jb-sidebar-left" style="display:inline-block;position: fixed;"> 
       {% if request.GET.category == '전체/' %}
           <a style="display:block;width:inherit; color:black;" href="/app/contentsapp/study/?category=전체/">전체</a>
