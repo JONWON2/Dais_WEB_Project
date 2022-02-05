@@ -19,7 +19,7 @@
 <br>
 
 ## 🚗 How to run
-*우분투 -> 도커편
+*우분투 & AWS or * 우분투 개인서버 -> 도커를 이용한 배포
 
 1. 도커 허브(https://hub.docker.com/)에서 아나콘다 최신 이미지를 다운받아주세요.
 ```
@@ -43,7 +43,7 @@
 ```
 4. 격리된 컨테이너 공간을 생성합니다.
 ```
-  docker run --name Lab -v /home/pratice/:/working_docker_folder -p 8000:8000 continuumio/anaconda3:latest
+  docker run -it --name Lab -v /home/pratice/:/working_docker_folder -p 8000:8000 continuumio/anaconda3:latest
 
   ## 도커 환경에 진입했다면, 파이썬 3.6.4 버전으로 가상환경 생성.
   conda create -n lab python=3.6.4
