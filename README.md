@@ -1,5 +1,12 @@
 #  Side Project -> Django를 활용한 웹사이트 제작하기
 
+<br>
+<br>
+
+![main page](https://user-images.githubusercontent.com/82020691/152634327-0ad8ee5f-dda6-41a4-95d4-4bb3b55724d4.JPG)
+
+<br>
+<br>
 
 작성자 : 김종원 / 최근 수정일자 : 2022.02.03. 
 
@@ -11,11 +18,6 @@
       * MTV 패턴 소개
     * DB 설계시 ERD 작성에 대한 무료 툴 소개
  
-<br>
-<br>
-
-![main page](https://user-images.githubusercontent.com/82020691/152634232-23e983a9-4af7-4735-8c3a-0318f1bd98ac.JPG)
-
 <br>
 <br>
 
