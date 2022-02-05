@@ -61,7 +61,9 @@
   cd /working_docker_folder/Dais_WEB_Project/
   # mysqlclient를 설치하기 위해 아래 코드를 진행.
   apt-get update
+  # 만약 아래 코드가 에러가 난다면 - > apt-get install default-libmysqlclient-dev build-essential 
   apt-get install python3.6-dev default-libmysqlclient-dev build-essential
+  # mysqlclient가 반드시 설치가 되어야한다.
   pip install mysqlclient
   pip install -r requirements.txt
 ```
