@@ -94,7 +94,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
-    'custom': { # thirdapp에서 사용할 데이터베이스 설정 추가
+    'custom': { 
     'ENGINE': 'django.db.backends.mysql',
     'NAME': "Dais",
     'USER': "OpenDaisLab",

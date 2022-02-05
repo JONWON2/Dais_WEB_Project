@@ -74,6 +74,48 @@
 ```
 
 <br>
+## 🚗 How to run
+* 윈도우 -> 아나콘다
+1. 아나콘다 프롬프트를 실행시켜 python 3.6.4의 가상환경을 만든다.
+```
+  conda create -n django python=3.6.4
+```
+2. vscode를 실행 시켜서 git clone을 진행한다.
+```
+  git clone https://github.com/dais-lab/Dais_WEB_Project.git
+```
+3. 아까 설치한 django 가상환경으로 설정 후, 필요한 패키지를 설치한다.
+```
+  # vs code 창에서 command Propt를 클릭하여 아래 명령어를 입력해 패키지를 설치한다.
+  pip install -r requirements.txt
+  pip install mysqlclient-1.4.6-cp36-cp36m-win_amd64.whl
+```
+4. 시크릿키를 발급 받아서 secrets.json 파일을 생성 후 기입해주세요.
+```
+  https://www.miniwebtool.com/django-secret-key-generator/
+  
+  secrets.json 파일에 ... 부분에 시크릿키를 발급받아서 진행해주세요.
+  {
+    "SECRET_KEY": "..."
+  }
+```
+5. 프로젝트 실행에 필요한 테이블을 생성해주세요.
+```
+  python manage.py migrate
+```
+
+6. 웹 어플리케이션(WAS)을 실행시켜주세요.
+```
+  python manage.py runserver
+```
+
+7. 웹 사이트에 아래 링크를 입력해주세요.
+```
+  http://127.0.0.1:8000/app/main 
+```
+
+
+
 
 ## ⚙ Environment
 
