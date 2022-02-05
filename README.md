@@ -1,7 +1,10 @@
 #  Side Project -> Django를 활용한 웹사이트 제작하기
 
+<br>
+
 ![main page](https://user-images.githubusercontent.com/82020691/152634232-23e983a9-4af7-4735-8c3a-0318f1bd98ac.JPG)
 
+<br>
 작성자 : 김종원 / 최근 수정일자 : 2022.02.03. 
 
   * 추후 개발했던 방법에 대해서 기록을 남기고자 합니다.
