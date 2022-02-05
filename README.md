@@ -61,7 +61,9 @@
   cd /working_docker_folder/Dais_WEB_Project/
   # mysqlclient를 설치하기 위해 아래 코드를 진행.
   apt-get update
-  apt-get install python3.9-dev default-libmysqlclient-dev build-essential
+  # 만약 아래 코드가 에러가 난다면 - > apt-get install default-libmysqlclient-dev build-essential 
+  apt-get install python3.6-dev default-libmysqlclient-dev build-essential
+  # mysqlclient가 반드시 설치가 되어야한다.
   pip install mysqlclient
   pip install -r requirements.txt
 ```
@@ -81,6 +83,11 @@
   http://127.0.0.1:8000/app/main or http://외부IP:8000/app/main or http://도메인:8000/app/main 
 ```
 
+9. 만약 AWS를 사용해 실행시키는 경우. 보안 그룹을 다음과 같이 설정해야 접속이 가능하다.
+![aws 보안규칙](https://user-images.githubusercontent.com/46054315/152639107-711432db-85b5-4cd5-9746-0eaf73646740.PNG)
+
+---
+<br>
 <br>
 
 ## 🚗 How to run
